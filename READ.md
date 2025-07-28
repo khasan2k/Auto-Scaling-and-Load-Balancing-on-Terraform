@@ -30,18 +30,14 @@ This repository contains Terraform code to provision a complete EC2 Auto Scaling
 ## 📁 Project Structure
 
 ```bash
-.
+web-app-project/
+  ├── ec2.tf                 # Launch Template, Security Groups, Load Balancer, Target Group, Auto Scaling Group and policies for EC2
+  ├── user_data.sh           # EC2 instance bootstrap script
+  ├── variables.tf           # Input variables
+  ├── vpc.tf                 # VPC, Subnets, Internet Gateway, Route Tables
 ├── main.tf                  # Root Terraform config
-├── variables.tf             # Input variables
-
-├── outputs.tf               # Output values
-├── vpc.tf                   # VPC, Subnets, Internet Gateway, Route Tables
-├── security_groups.tf       # Security Groups
-├── launch_template.tf       # Launch Template for EC2
-├── alb.tf                   # Load Balancer, Target Group, Listener
-├── autoscaling.tf           # Auto Scaling Group and policies
-├── user_data.sh             # EC2 instance bootstrap script
-├── terraform.tfvars         # Variable values
+├── output.tf                # Output values
+├── providers.tf             # Security Groups
 ```
 
 ## ⚙️ Prerequisites
